@@ -23,13 +23,11 @@
     "deconfigure": "node ./src/tools/script-for-os.js",
     "deconfigure:default": "echo 'Altering npm configuration not necessary for this platform.';",
     "deconfigure:windows": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\configure-remove.ps1",
-    "format": "sort-package-json && prettier --write '**/*.{ts,js,mjs,cjs,json,yml,md}' && eslint --fix .",
     "info": "node ./src/bundle-info/current.js",
     "info-config": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\info-config.ps1",
     "info-service": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\info-service.ps1",
     "preinstall": "echo WARNING: Running install in this project is not necessary to install or bundle pm2. See README.",
     "postinstall": "echo WARNING: Running install in this project is not necessary to install or bundle pm2. See README.",
-    "lint": "eslint . && editorconfig-checker .",
     "remove": "node ./src/tools/script-for-os.js",
     "remove:default": "echo 'ERROR: Could not detect host platform'",
     "remove:unix": "bash ./src/unix/remove.sh",
@@ -47,13 +45,5 @@
     "@jessety/pm2-logrotate": "^2.7.1",
     "node-windows": "1.0.0-beta.6",
     "pm2": "5.2.2"
-  },
-  "devDependencies": {
-    "@jessety/eslint-config": "^2.4.0",
-    "@jessety/prettier-config": "^1.2.0",
-    "editorconfig-checker": "^4.0.2",
-    "eslint": "^8.28.0",
-    "prettier": "^2.7.1",
-    "sort-package-json": "^2.1.0"
   }
 }

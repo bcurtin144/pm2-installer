@@ -1,8 +1,0 @@
-{
-  "exclude": [
-    ".git",
-    "node_modules",
-    "\\.DS_Store$",
-    "bundle.*"
-  ]
-}
