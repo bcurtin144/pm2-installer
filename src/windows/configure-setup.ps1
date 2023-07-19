@@ -8,7 +8,7 @@ $Directory_prefix = "$Directory\npm"
 $Directory_modules = "$Directory\npm\node_modules"
 $Directory_cache = "$Directory\npm-cache"
 
-function Create-Directories {
+function New-Directories {
 
   if (Test-Path $Directory) {
     Write-Host "Directory $Directory already exists, no need to create it."
@@ -72,7 +72,7 @@ function Update-Path {
 
     Write-Host "Path does not contain $NewPath. Adding it.."
 
-    $Paths = $Paths + $NewPath | where { $_ }
+    $Paths = $Paths + $NewPath | Where-Object { $_ }
 
     [Environment]::SetEnvironmentVariable('Path', $Paths -join ';', [EnvironmentVariableTarget]::Machine)
 
@@ -85,7 +85,7 @@ function Update-Path {
   }
 }
 
-Create-Directories
+New-Directories
 Set-NPM-Config
 Update-Path($Directory_prefix)
 
