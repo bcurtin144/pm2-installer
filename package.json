@@ -1,21 +1,14 @@
 {
-  "name": "pm2-installer",
-  "version": "3.4.3",
+  "name": "@bcurtin144/pm2-installer",
+  "version": "4.0.202307",
   "description": "Install pm2 offline as a service on Windows or Linux",
-  "homepage": "https://github.com/jessety/pm2-installer#readme",
-  "bugs": {
-    "url": "https://github.com/jessety/pm2-installer/issues"
-  },
+  "homepage": "https://github.com/bcurtin144/pm2-installer#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessety/pm2-installer.git"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/jessety"
+    "url": "git+https://github.com/bcurtin144/pm2-installer.git"
   },
   "license": "MIT",
-  "author": "Jesse Youngblood",
+  "author": "Brian Curtin",
   "scripts": {
     "bundle": "node ./src/tools/script-for-os.js",
     "bundle:default": "echo 'ERROR: Could not detect host platform'",
