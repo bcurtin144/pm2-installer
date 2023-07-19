@@ -10,10 +10,6 @@
   "license": "MIT",
   "author": "Brian Curtin",
   "scripts": {
-    "bundle": "node ./src/tools/script-for-os.js",
-    "bundle:default": "echo 'ERROR: Could not detect host platform'",
-    "bundle:unix": "bash ./src/unix/bundle.sh",
-    "bundle:windows": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\bundle.ps1",
     "configure": "node ./src/tools/script-for-os.js",
     "configure-policy": "node ./src/tools/script-for-os.js",
     "configure-policy:default": "echo 'Altering PowerShell execution policy not necessary for this platform.';",
@@ -35,11 +31,7 @@
     "setup": "node ./src/tools/script-for-os.js",
     "setup:default": "echo 'ERROR: Could not detect host platform'",
     "setup:unix": "bash ./src/unix/setup.sh",
-    "setup:windows": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\setup.ps1",
-    "unbundle": "node ./src/tools/script-for-os.js",
-    "unbundle:default": "echo 'ERROR: Could not detect host platform'",
-    "unbundle:unix": "bash ./src/unix/unbundle.sh",
-    "unbundle:windows": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\unbundle.ps1"
+    "setup:windows": "PowerShell -NoProfile -ExecutionPolicy Bypass src\\windows\\setup.ps1"
   },
   "dependencies": {
     "@jessety/pm2-logrotate": "^2.7.1",
